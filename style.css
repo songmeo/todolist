@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}
+#wrapper{
+  width:1350px;
+  margin:0 auto;
+}
+.row {
+    margin: 0 -5px;
+    display: flex;
+}
+
+.card {
+    height: 100%;
+    min-height: 1000px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
+    padding: 50px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.list-card {
+    height: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
+    padding: 12px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    background-color: #f1f1f1;
+    text-align: center;
+
+}
+
+.task-card {
+    height: 89%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
+    padding: 30px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+td {
+    padding: 50px;
+}
+
+.main {
+    flex: 80%;
+    padding: 0px 30px 0px 0px;
+    margin: 10px;
+    
+}
+
+.side {
+    flex: 20%;
+    padding: 0px 5px 0px 30px;
+    margin: 10px;
+}
+
+#lists {
+    font-family: 'Roboto Slab', serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#lists td {
+    padding: 10px;
+}
+
+#lists td:hover {
+    background-color: #b198e6;
+    border-radius: 6px;
+    color: white;
+}
+
+.button {
+    background-color: #9370DB;
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: ' +';
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 9px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right:0;
+}
+
+.dropbtn {
+    position: relative;
+    background-color: #9370DB;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 160%;
+  }
+  
+  .dropdown {
+    float: left;
+    margin-top: 40px;
+    margin-left: 6px;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    display: none;
+    background-color: white;
+    min-width: 184px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+      color: black;
+      background-color:#b198e6;
+    }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    color: black;
+    background-color: white;
+  }
+
+  input[type=text] {
+    width: 60%;
+    box-sizing: border-box;
+    border: 2px solid #9370DB;
+    border-radius: 4px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+    float:left;
+    margin-left: 76px;
+    margin-right: 7px;
+    margin-top: 40px;
+  }
+
+  .add-button {
+    background-color:#7B68EE;
+    font-family: 'Roboto Slab', serif;
+    width: 10%;
+    color: white;
+    padding: 14px;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    float: left;
+    margin-top: 40px;
+  }
+
+  .task-board {
+    border: 6px;
+    margin-top: 160px;
+    margin-left: 90px;
+    height: 800px;
+    width: 80%;
+    background-color: white;
+    border-radius: 15px;
+  }
+
+  .dropdown-extra {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 175px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-extra a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-extra a:hover {
+      color: black;
+      background-color:#b198e6;
+    }
+  
+  .dropdown:hover .dropdown-extra {
+    display: block;
+    right: 0;
+    margin-left: 50px;
+  }
+  
+  .dropdown:hover .dropbtn {
+    color: black;
+    background-color: white;
+  }
+  
+  #container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    border: 1px solid #b198e6;
+    padding: 5px;
+    border-radius: 20px;
+  }
+ 
+  #container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #eee;
+  }
+
+  #container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  #container input:checked ~ .checkmark {
+    background-color: #7B68EE;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+
+  }
+  
+  input[type=checkbox]:checked + label.strike-through {
+    text-decoration: line-through;
+  }
+
+  #container input:checked ~ .checkmark:after {
+    display: block;
+
+  }
+  
+  #container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .avatar {
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }

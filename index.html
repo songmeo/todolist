@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="row">
+        <div class="side">
+          <div class="list-card">
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
+          </div>
+          <div class="task-card">
+            <table id="lists">
+              <tr>
+                <td>All Tasks</td>
+              </tr>
+              <tr>
+                <td>Personal</td>
+              </tr>
+              <tr>
+                <td>Work</td>
+              </tr>
+              <tr>
+                <td>Grocery</td>
+              </tr>
+            </table>
+            <br>
+            <button class="button"><span>New List</span></button>
+          </div>
+         </div>
+        <div class="main">
+          <div class="card">
+            <div class="dropdown">
+              <button class="dropbtn">All Tasks</button>
+              <div class="dropdown-content">
+                <a href="#">Personal</a>
+                <a href="#">Work</a>
+                <a href="#">Grocery</a>
+              </div>
+            </div>
+            <form>
+              <input type="text" name="add-task" placeholder="Add tasks...">
+            </form>
+            <button class="add-button"><span>Add</span></button>
+            <div class="dropdown">
+              <button class="dropbtn">...</button>
+              <div class="dropdown-extra">
+                <a href="#"><i class="glyphicon glyphicon-print"></i> Print List</a>
+                <a href="#"><i class="fa fa-trash w3-large"></i> Completed Tasks</a>
+                <a href="#"><i class="fa fa-trash w3-large"></i> Delete All</a>
+              </div>
+            </div>
+            <div class="task-board card">
+              <label id="container" class="strike-through">One
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label id="container" class="strike-through">Two
+                <input type="checkbox">
+                <span class="checkmark" ></span>
+              </label>
+              <label id="container" class="strike-through">Three
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label id="container" class="strike-through">Four
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>   
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+      
+  </footer>
+</html>
