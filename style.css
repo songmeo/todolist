@@ -304,3 +304,79 @@ td {
     height: 100px;
     border-radius: 50%;
   }
+
+  .hidden {
+    position: absolute;
+    appearance: none;
+  }
+
+  .list {
+    display: flex;
+  }
+
+  .check--label {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    align-items: center;
+  }
+
+  .check--label-box {
+    display: flex;
+    align-self: center;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    margin: 0 20px;
+    border: 2px solid #7B68EE;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .check--label-text {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-self: center;
+    padding: 20px;
+    border-left: 1px solid #ecf0f1;
+  }
+
+  .check--label-text:after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 7.5%;
+    transform: translateY(-50%);
+    transition: width 100ms ease-in-out;
+  }
+
+  .hidden:checked + .check--label {
+    background-color: #fff;
+  }
+
+  .hidden:checked + .check--label .check--label-box {
+    background-color: #7B68EE;
+  }
+  .hidden:checked + .check--label .check--label-box:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .hidden:checked + .check--label .check--label-text:after {
+    width: 85%;
+  }
