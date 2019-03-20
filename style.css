@@ -1,16 +1,12 @@
-
-@charset "UTF-8";
-
 * {
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
 }
-
 #wrapper{
-    width: 1850px;   
+  width:1350px;
+  margin:0 auto;
 }
-
 .row {
     margin: 0 -5px;
     display: flex;
@@ -37,7 +33,6 @@
 }
 
 .task-card {
-    cursor: pointer;
     height: 89%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
     padding: 30px;
@@ -56,7 +51,6 @@
 
 td {
     padding: 50px;
-    text-align: left;
 }
 
 .main {
@@ -80,46 +74,12 @@ td {
 
 #lists td {
     padding: 10px;
-    align-content: left;
 }
 
 #lists td:hover {
-    background-color: #b198e6b9;
+    background-color: #b198e6;
     border-radius: 6px;
     color: white;
-}
-
-.btn-trash {
-  background-color: rgba(0,0,0, 0);
-  border: none;
-  color: black;
-  cursor: pointer;
-  border-radius: 6px;
-  padding: 5px 5px 5px 5px;
-}
-
-.btn-trash:hover {
-  background-color:rgb(83, 68, 170);
-  color: white;
-  padding: 5px 5px 5px 5px;
-  border-radius: 6px;
-}
-
-.btn-pencil{
-  margin-left: 14px;
-  background-color: rgba(0,0,0, 0);
-  border: none;
-  color: black;
-  cursor: pointer;
-  border-radius: 6px;
-  padding: 5px 5px 5px 5px;
-}
-
-.btn-pencil:hover {
-  background-color:rgb(83, 68, 170);
-  color: white;
-  padding: 5px 5px 5px 5px;
-  border-radius: 6px;
 }
 
 .button {
@@ -190,7 +150,7 @@ td {
   }
   
   .dropdown-content a:hover {
-      color: white;
+      color: black;
       background-color:#b198e6;
     }
   
@@ -217,7 +177,7 @@ td {
   }
 
   .add-button {
-    background-color:rgb(83, 68, 170);
+    background-color:#7B68EE;
     font-family: 'Roboto Slab', serif;
     width: 10%;
     color: white;
@@ -257,15 +217,14 @@ td {
   }
   
   .dropdown-extra a:hover {
-      color: white;
-      background-color:#b198e6b9;
+      color: black;
+      background-color:#b198e6;
     }
   
   .dropdown:hover .dropdown-extra {
     display: block;
     right: 0;
-    position: fixed;
-    top: 156px;  
+    margin-left: 50px;
   }
   
   .dropdown:hover .dropbtn {
@@ -308,7 +267,7 @@ td {
   }
   
   #container input:checked ~ .checkmark {
-    background-color:rgb(83, 68, 170);
+    background-color: #7B68EE;
   }
   
   .checkmark:after {
@@ -318,17 +277,24 @@ td {
 
   }
   
+  input[type=checkbox]:checked + label.strike-through {
+    text-decoration: line-through;
+  }
+
   #container input:checked ~ .checkmark:after {
     display: block;
+
   }
   
   #container .checkmark:after {
     left: 9px;
     top: 5px;
-    width: 7px;
-    height: 12px;
+    width: 5px;
+    height: 10px;
     border: solid white;
     border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
 
@@ -361,10 +327,45 @@ td {
     display: flex;
     align-self: center;
     position: relative;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     margin: 0 20px;
-    border: 2px solid rgb(83, 68, 170);
+    border: 2px solid #7B68EE;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .check--label-text {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-self: center;
+    padding: 20px;.hidden {
+    position: absolute;
+    appearance: none;
+  }
+
+  .list {
+    display: flex;
+  }
+
+  .check--label {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    align-items: center;
+  }
+
+  .check--label-box {
+    display: flex;
+    align-self: center;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    margin: 0 20px;
+    border: 2px solid #7B68EE;
     cursor: pointer;
     border-radius: 50%;
   }
@@ -375,7 +376,6 @@ td {
     cursor: pointer;
     align-self: center;
     padding: 20px;
-    font-size: 22px;
     border-left: 1px solid #ecf0f1;
   }
 
@@ -397,18 +397,57 @@ td {
   }
 
   .hidden:checked + .check--label .check--label-box {
-    background-color: rgb(83, 68, 170);
+    background-color: #7B68EE;
   }
   .hidden:checked + .check--label .check--label-box:after {
     content: '';
     display: block;
     position: absolute;
-    top: 3px;
-    left: 7px;
-    width: 7px;
+    top: 1px;
+    left: 5px;
+    width: 6px;
     height: 12px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .hidden:checked + .check--label .check--label-text:after {
+    width: 85%;
+  }
+    border-left: 1px solid #ecf0f1;
+  }
+
+  .check--label-text:after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 7.5%;
+    transform: translateY(-50%);
+    transition: width 100ms ease-in-out;
+  }
+
+  .hidden:checked + .check--label {
+    background-color: #fff;
+  }
+
+  .hidden:checked + .check--label .check--label-box {
+    background-color: #7B68EE;
+  }
+  .hidden:checked + .check--label .check--label-box:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }
 
