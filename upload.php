@@ -9,10 +9,10 @@ if (isset($_POST["submit"])) {
   // check if image file is an actual image
   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
   if ($check == false) {
-   echo "File is not an image";	  
-   $uploadOk = 0;
+  echo "File is not an image";	  
+  $uploadOk = 0;
   }
-  
+
   // check file size
   if ($_FILES["fileToUpload"]["size"] > 500000) {
     echo "File is too large";
@@ -30,4 +30,5 @@ if (isset($_POST["submit"])) {
     }  
   }
 }
+
 ?>

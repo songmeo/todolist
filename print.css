@@ -2,7 +2,7 @@ body {
   visibility: hidden;
 }
 
-#print {
+.check--label-text {
   visibility: visible;
-  font-size: 1000px;
+  font-size: 500%;
 }
