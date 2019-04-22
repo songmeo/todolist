@@ -1,5 +1,6 @@
 <?php
   if(isset($_POST['logout'])) {
+    session_name($user);
     session_destroy();
     header('Location: login_page.php');
     exit;

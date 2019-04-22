@@ -1,19 +1,36 @@
 <?php
-
-  session_start();
   error_reporting(0);
 
   $user = $_POST['username'];
   $pass = $_POST['password'];
 
+  //login
   if(isset($_POST['submit'])){
     if($user=="admin" && $pass==admin){
       header('Location:index.php');
+      session_name($user);
+      session_start();
     }
-
     else{
       echo "Wrong Username or/and Password";
     }
   }
 
+  //logout
+  if(isset($_POST['logout'])) {
+    session_name($user);
+    session_destroy($user);
+    header('Location: login_page.php');
+    exit;
+  }
+
+  //write to list
+  if(isset($_POST['add-button'])){
+    $addTask = $_POST['add-task'];
+    $file = fopen("taskList.txt","a+") or die("Unable to open file");
+    $s = $addTask."\r\n";
+    fputs($file,$s) or die("Unable to open save");
+    fclose($file);
+    header('Location: index.php');
+  }
 ?>

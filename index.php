@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="upload.js" type="text/javascript"></script>
+    <script src="function.js" type="text/javascript"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -50,7 +51,7 @@
          </div>
         <div class="main">
           <div class="card">
-            <form action="index_php.php" method="POST" id="action">
+            <form action="login_check.php" method="POST" id="action">
               <input type="submit" class="logout-button" name="logout" value="Logout">
             </form>
             <div class="dropdown" id="dropContent">
@@ -94,7 +95,8 @@
           i++;  
           var title = document.getElementById('addTask').value;
           var node = document.createElement('div');        
-          node.innerHTML = '<input id="option" type="checkbox" class="hidden"' + i + '" name="checkbox' + i + '"><label for="option" class="check--label"><span class="check--label-box"></span><span class="check--label-text"' + i + '">'+ title +'</span>';       
+          //node.innerHTML = '<input id="option" type="checkbox" class="hidden"' + i + '" name="checkbox' + i + '"><label for="option" class="check--label"><span class="check--label-box"></span><span class="check--label-text"' + i + '">'+ title +'</span>';
+          node.innerHTML = '<input id="option' + i + '" type="checkbox" class="hidden" name="checkbox"><label for="option' + i + '" class="check--label"><span class="check--label-box"></span><span class="check--label-text">'+ title +'</span>';      
           document.getElementById('doList').appendChild(node);    
         }
       }
