@@ -5,6 +5,7 @@ function addRow(){
         i++;
         var title = document.getElementById('addTask').value;
         var node = document.createElement('div'); 
+        node.setAttribute("id", "n" + i);
         node.innerHTML = '<input id="option' + i + '" type="checkbox" class="hidden" name="checkbox"><label for="option' + i + '" class="check--label"><span class="check--label-box"></span><span class="check--label-text">'+ title +'</span>';      
         document.getElementById('doList').appendChild(node);    
     }
@@ -17,10 +18,11 @@ function onFormSubmit(){
 
 //delete all tasks
 function deleteAll() {
-    var e = document.getElementById("doList");
-    while (e.firstChild) {
-        e.removeChild(e.firstChild);
-    }
+    let x;
+    for (x = 1; x <= i; x++) {
+        let e = document.getElementById("n" + x);
+        e.parentNode.removeChild(e);
+    }  
 }
 
 //delete completed tasks
@@ -35,13 +37,4 @@ function deleteComplete() {
         txt.parentNode.removeChild(txt);
         }
     }
-}
-
-//scrolling
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
 }

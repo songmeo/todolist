@@ -49,7 +49,12 @@
                 <div class="list-item" id="doList">  
                   <div class="progress-container">
                     <div class="progress-bar" id="myBar"></div>
-                  </div>
+                  </div>                
+                  <input id="option" type="checkbox" name="checkbox" class="hidden">
+                  <label for="option" class="check--label">
+                    <span class="check--label-box"></span>
+                    <span class="check--label-text">One</span>
+                  </label>
                  </div>
              </form>
            </div>   
@@ -66,6 +71,15 @@
       document.getElementById("add").click();
       }
     });
+
+    //scrolling
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
      </script>
    </body>
  </html>
