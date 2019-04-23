@@ -6,7 +6,7 @@
 
   //login
   if(isset($_POST['submit'])){
-    if($user=="admin" && $pass==admin){
+    if($user=="admin" && $pass=="admin"){
       header('Location:index.php');
       session_name($user);
       session_start();
@@ -19,9 +19,14 @@
   //logout
   if(isset($_POST['logout'])) {
     session_name($user);
-    session_destroy($user);
+    session_start();
+    session_unset();
+    session_destroy();
+    session_write_close();
+    setcookie(session_name(), '', 0,'/');
+    session_regenerate_id(true);
     header('Location: login_page.php');
-    exit;
+    exit();
   }
 
   //write to list

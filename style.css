@@ -33,8 +33,8 @@
   }
 }
 
-#wrapper{
-  width: 100%;  
+@media screen and (max-width: 600px) {
+  body {float: none;}
 }
 
 .row {
@@ -43,13 +43,14 @@
 }
 
 .card {
-  width: 1050px;
-  height: 100%;
-  min-height: 1000px;
+  width: 1500px;
+  height: 101%;
+  min-height: 940px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
   padding: 30px;
   text-align: center;
   background-color: #f1f1f1;
+  margin: 10px 10px 10px 10px;
 }
 
 .list-card {
@@ -60,7 +61,7 @@
   font-family: 'Roboto Slab', serif;
   background-color: #f1f1f1;
   text-align: center;
-
+  margin: 10px 10px 10px 10px;
 }
 
 .task-card {
@@ -68,82 +69,34 @@
   height: 80%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
   padding: 30px;
-  margin-top: 10px;
+  margin: 10px 10px 10px 10px; 
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: #f1f1f1;  
 }
 
-tr button {
-  float: right;
+.side {  
+  padding: 0px 5px 0px 30px;  
 }
 
-td {
-  padding: 50px;
-  text-align: left;
-}
-
-.main {
-  flex: 80%;
-  margin: 10px;    
-}
-
-.side {
-  flex: 20%;
-  padding: 0px 5px 0px 30px;
-  margin: 10px;
-}
-
-#lists {
-  font-family: 'Roboto Slab', serif;
-  border-collapse: collapse;
+.extra-content {
+  font-family: 'Roboto Slab', serif; 
   width: 100%;
+  border-radius: 6px; 
 }
 
-#lists td {
-  padding: 10px;
-  align-content: left;
-}
-
-#lists td:hover {
-  background-color: #b198e6b9;
-  border-radius: 6px;
-  color: white;
-}
-
-.btn-trash {
-  background-color: rgba(0,0,0, 0);
-  border: none;
+.extra-content a {
   color: black;
-  cursor: pointer;
+  padding: 15px 16px; 
+  display: block;
   border-radius: 6px;
-  padding: 5px 5px 5px 5px;
 }
 
-.btn-trash:hover {
-  background-color:rgb(83, 68, 170);
+.extra-content a:hover {
   color: white;
-  padding: 5px 5px 5px 5px;
-  border-radius: 6px;
+  background-color:#b198e6b9;
 }
 
-.btn-pencil{
-  margin-left: 5px;
-  background-color: rgba(0,0,0, 0);
-  border: none;
-  color: black;
-  cursor: pointer;
-  border-radius: 6px;
-  padding: 5px 5px 5px 5px;
-}
-
-.btn-pencil:hover {
-  background-color:rgb(83, 68, 170);
-  color: white;
-  padding: 5px 5px 5px 5px;
-  border-radius: 6px;
-}
-
-.button {
+.logout-button {
   background-color: #9370DB;
   font-family: 'Roboto Slab', serif;
   width: 100%;
@@ -155,105 +108,19 @@ td {
   display: inline-block;
   color: white;
 }
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: ' +';
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 9px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right:0;
-}
-
-.logout-button{
-  font-family: 'Roboto Slab', serif;
-  font-size: 15px;
-  font-weight: bold;
-  background-color: white;
-  color: black;
-  padding: 5px 10px;
-  margin-right: 25px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  float: right;
-  letter-spacing: 1px;
-}
-
-.logout-button:hover {
-  background-color: rgb(182, 171, 189);
-  color: white;
-  border-radius: 6px;
-}
-
-.dropbtn {
-  position: relative;
-  background-color: #9370DB;
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  min-width: 184px;
-  float: left;
-  margin-top: 60px;
-  margin-left: 20px;
- 
-}
-
-.dropdown-content {
-  position: absolute;
-  display: none;
-  background-color: white;
-  min-width: 184px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  margin-top: 115px;
-  margin-left: 20px;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  color: white;
-  background-color:#b198e6;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  color: black;
-  background-color: white;
+.logout-button:hover{
+  background: red;
 }
 
 input[type=text] {
-  width: 60%;
+  width: 70%;
   box-sizing: border-box;
   border: 2px solid #9370DB;
   border-radius: 6px;
   background-color: white;
-  padding: 12px 20px 12px 40px;
+  padding: 12px 0 12px 40px;
   float:left;
-  margin-left: 5px;  
+  margin-left: 90px;  
   margin-top: 60px;
 }
 
@@ -268,7 +135,7 @@ input[type=text] {
   transition: all 0.5s;
   cursor: pointer;
   float: left;
-  margin-top: 27px;
+  margin-top: 60px;
   margin-left: 5px;
 }
 
@@ -277,81 +144,14 @@ input[type=text] {
   color: white;
 }
 
-.extra {
-  background-color: #9370DB;
-  margin-top: 5px;
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  width: 60px;
-  float: left;
-  margin-top: 27px;
-  margin-left: 5px;
-}
-
-.extra-content {
-  display: none;
-  background-color: white;
-  width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  margin: 0px 25px 0px 0px;
-}
-
-.extra-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.extra-content a:hover {
-  color: white;
-  background-color:#b198e6b9;
-}
-
-.dropdown-extra:hover .extra-content {
-  display: block;
-  right: 0;
-  position: fixed;
-  top: 156px;
-}
-
-.dropdown-extra:hover .extra {
-  color: black;
-  background-color: white;
-}
-
 .task-board {
   border: 6px;
   margin-top: 160px;
   margin-left: 90px;
-  height: 800px;
+  height: 80%;
   width: 80%;
   background-color: white;
   border-radius: 15px;
-}
-
-#container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  border: 1px solid #b198e6;
-  padding: 5px;
-  border-radius: 20px;
-}
-
-#container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
 }
 
 .checkmark {
@@ -362,34 +162,6 @@ input[type=text] {
   width: 25px;
   border-radius: 50%;
   background-color: #eee;
-}
-
-#container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-#container input:checked ~ .checkmark {
-  background-color:rgb(83, 68, 170);
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-#container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-#container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 7px;
-  height: 12px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
 }
 
 .hidden {
@@ -519,8 +291,8 @@ input[type=text] {
 }
 
 .avatar-preview {
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   position: relative;
   top: -35px;
   border-radius: 100%;
@@ -536,4 +308,3 @@ input[type=text] {
   background-repeat: no-repeat;
   background-position: center;
 }
-

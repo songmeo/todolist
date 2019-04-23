@@ -10,9 +10,11 @@
           <div class="card">
             <form name="input" action="login_check.php" method="POST">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" pattern="[a-zA-Z][a-zA-Z0-9-_\.]{1,20}" required><br>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" autocomplete="off" required><br>
+                <input type="text" id="username" name="username" pattern="[a-zA-Z][a-zA-Z0-9-_\.]{1,20}" required>
+                <br>
+                <label for="password">Password&nbsp</label>
+                <input type="password" id="password" name="password" autocomplete="off" required>
+                <br>
                 <input type="submit" name="submit" value="Login">
               </form>
           </div>
