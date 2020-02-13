@@ -1,8 +1,5 @@
 <?php
-$server = "anysql.itcollege.ee";
-$user = "team4";
-$password = "rw_353MIl_e";
-$database = "WT_4";
+$configs = include('config.php');
 
 $mysqli = new mysqli($server, $user, $password, $database);
 if($mysqli->connect_error)
